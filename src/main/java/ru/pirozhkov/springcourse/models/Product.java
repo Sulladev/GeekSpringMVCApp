@@ -9,6 +9,9 @@ public class Product {
     private String brand;
     private double price;
 
+    public Product() {
+    }
+
     public Product(int id, String title, String description, String brand, double price) {
         this.id = id;
         this.title = title;

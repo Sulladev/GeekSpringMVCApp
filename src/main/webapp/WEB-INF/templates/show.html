@@ -30,11 +30,13 @@
     </tr>
     </tbody>
 </table>
-
-<!--<a th:href="@{/people/{id}/edit(id=${person.getId()})}">Edit</a>-->
-
-<!--<form th:method="DELETE" th:action="@{/people/{id}(id=${person.getId()})}">-->
-<!--    <input type="submit" value="Delete"/>-->
-<!--</form>-->
+<br>
+<!--/*@thymesVar id="product" type="ru.pirozhkov.springcourse.models.Product"*/-->
+<a th:href="@{/product/{id}/edit(id=${product.getId()})}">Edit</a>
+<br/>
+<hr/>
+<form th:method="DELETE" th:action="@{/product/{id}(id=${product.getId()})}">
+    <input type="submit" value="Delete"/>
+</form>
 </body>
 </html>

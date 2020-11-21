@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit product</title>
+</head>
+<body>
+<h1>Edit:</h1>
+<!--/*@thymesVar id="product" type="ru.pirozhkov.springcourse.models.Product"*/-->
+<form th:method="POST" th:action="@{/product/{id}(id=${product.getId()})}" th:object="${product}">
+    <label for="title">Enter name: </label>
+    <input type="text" th:field="*{title}" id="title"/>
+    <label for="description">Enter description: </label>
+    <input type="text" th:field="*{description}" id="description"/>
+    <label for="brand">Enter brand: </label>
+    <input type="text" th:field="*{brand}" id="brand"/>
+    <label for="price">Enter price: </label>
+    <input type="text" th:field="*{price}" id="price"/>
+    <br/>
+    <input type="submit" value="Update!"/>
+</form>
+
+</body>
+</html>
+
+

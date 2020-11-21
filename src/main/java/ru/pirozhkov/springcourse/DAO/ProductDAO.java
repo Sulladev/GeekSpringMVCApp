@@ -41,7 +41,7 @@ public class ProductDAO {
         productList.add(product);
     }
 
-    public void update(int id, Product updatedProduct) {
+    public void edit(int id, Product updatedProduct) {
         Product productToBeUpdated = getProductById(id);
         productToBeUpdated.setTitle(updatedProduct.getTitle());
         productToBeUpdated.setBrand(updatedProduct.getBrand());
